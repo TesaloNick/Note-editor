@@ -1,0 +1,55 @@
+.container .notes .note .editButton, .container .notes .note .closeButton {
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  cursor: pointer; }
+
+.container .searchForm .searchButton, .container .searchForm .addingButton, .container .searchForm .clearAllButton, .container .addingForm .searchButton, .container .addingForm .addingButton, .container .addingForm .clearAllButton {
+  cursor: pointer;
+  background-color: #e7e4e4;
+  transition: 0.5s; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-image: url(./../assets/img/main-back.jpg); }
+
+.container {
+  max-width: 1200px;
+  margin: auto; }
+  .container .searchForm input, .container .searchForm button, .container .addingForm input, .container .addingForm button {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px; }
+  .container .searchForm .addingButton:hover, .container .searchForm .searchButton:hover, .container .searchForm .clearAllButton:hover, .container .addingForm .addingButton:hover, .container .addingForm .searchButton:hover, .container .addingForm .clearAllButton:hover {
+    background-color: #d6d5d5;
+    transition: 0.5s; }
+  .container .searchForm {
+    display: grid;
+    grid-template-columns: 50% 1fr; }
+  .container .addingForm {
+    display: grid;
+    grid-template-columns: 50% 1fr 1fr; }
+  .container .notes .note {
+    display: grid;
+    grid-template-columns: 1fr 60px 60px;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+    .container .notes .note div {
+      margin-left: 10px; }
+    .container .notes .note .editButton {
+      background-image: url(./../assets/img/edit.png);
+      transition: 0.5s; }
+    .container .notes .note .closeButton {
+      background-image: url(./../assets/img/close.png);
+      transition: 0.5s; }
+    .container .notes .note .editButton:hover, .container .notes .note .closeButton:hover {
+      transition: 0.5s;
+      transform: scale(1.2); }

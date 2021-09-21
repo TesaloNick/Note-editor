@@ -1,0 +1,93 @@
+$heightInputField: 30px;
+$indent: 10px;
+$noteButtonSize: 40px;
+$borderRadius: 5px;
+$transition: .5s;
+$shadow: 0 0 10px rgba(0,0,0,0.5);
+$background: #fffded;
+
+%node-button-props{
+  background-size: cover;
+  width: $noteButtonSize;
+  height: $noteButtonSize;
+  cursor: pointer;
+}
+%form-button-props{
+  cursor: pointer;
+  background-color: rgb(231, 228, 228);
+  transition: $transition;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-image: url(./../assets/img/main-back.jpg);
+}
+.container{
+  max-width: 1200px;
+  margin: auto;
+
+  .searchForm, .addingForm{
+    input, button{
+      padding: $indent;
+      margin: $indent;
+      border-radius: $borderRadius;
+    }
+
+    .searchButton, .addingButton, .clearAllButton{
+      @extend %form-button-props;
+    }
+
+    .addingButton:hover, .searchButton:hover, .clearAllButton:hover{
+      background-color: rgb(214, 213, 213);
+      transition: $transition;
+    }
+  }
+
+  .searchForm{
+    display: grid;
+    grid-template-columns: 50% 1fr;
+  }
+
+  .addingForm{
+    display: grid;
+    grid-template-columns: 50% 1fr 1fr;
+  }
+
+  .notes{
+    .note{
+      display: grid;
+      grid-template-columns: 1fr 60px 60px;
+      align-items: center;
+      background-color: white;
+      padding: $indent;
+      margin: $indent;
+      border-radius: $borderRadius;
+      box-shadow: $shadow;
+    
+      div{
+        margin-left: $indent;
+      }
+
+      .editButton{
+        @extend %node-button-props;
+        background-image: url(./../assets/img/edit.png);
+        transition: $transition;
+      }
+
+      .closeButton{
+        @extend %node-button-props;
+        background-image: url(./../assets/img/close.png);
+        transition: $transition;
+      }
+      .editButton:hover, .closeButton:hover{
+        transition: $transition;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
