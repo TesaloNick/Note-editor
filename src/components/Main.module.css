@@ -34,14 +34,25 @@ body {
     display: grid;
     grid-template-columns: 50% 1fr 1fr; }
   .container .notes .note {
-    display: grid;
-    grid-template-columns: 1fr 60px 60px;
-    align-items: center;
     background-color: white;
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+    .container .notes .note .noteBody {
+      display: grid;
+      grid-template-columns: 1fr 60px 60px;
+      align-items: center; }
+      .container .notes .note .noteBody p {
+        font-size: 24px; }
+    .container .notes .note .noteTags {
+      display: flex; }
+      .container .notes .note .noteTags p {
+        margin-right: 10px; }
+      .container .notes .note .noteTags .tag {
+        text-decoration: underline;
+        color: #0000da;
+        cursor: pointer; }
     .container .notes .note div {
       margin-left: 10px; }
     .container .notes .note .editButton {

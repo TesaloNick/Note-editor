@@ -59,15 +59,37 @@ body{
 
   .notes{
     .note{
-      display: grid;
-      grid-template-columns: 1fr 60px 60px;
-      align-items: center;
+
       background-color: white;
       padding: $indent;
       margin: $indent;
       border-radius: $borderRadius;
       box-shadow: $shadow;
-    
+      
+      .noteBody{
+        display: grid;
+        grid-template-columns: 1fr 60px 60px;
+        align-items: center;
+
+        p{
+          font-size: 24px;
+        }
+      }
+      
+      .noteTags{
+        display: flex;
+
+        p{
+          margin-right: $indent;
+        }
+
+        .tag{
+          text-decoration: underline;
+          color: rgb(0, 0, 218);
+          cursor: pointer;
+        }
+      }
+
       div{
         margin-left: $indent;
       }
